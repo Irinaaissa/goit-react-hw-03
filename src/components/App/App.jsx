@@ -1,23 +1,21 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+
 import { useState, useEffect } from 'react';
 import initialContacts from "../Data/initialContacts.json";
 import ContactForm from '../ContactForm/ContactForm';
 import './App.css'
 import SearchBox from '../SearchBox/SearchBox';
-import ContactList from '../ContactList/ContactList';
+ import ContactList from '../ContactList/ContactList';
 
 const getInitialContacts = () => {
   const savedContacts = window.localStorage.getItem('contacts');
   return savedContacts !== null ? JSON.parse(savedContacts) : initialContacts;
 };
-
+// 
 export default function App() {
   const [contacts, setContacts] = useState(getInitialContacts); 
   const [filter, setFilter] = useState(''); 
 
-  
+  // 
   const filteredContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );

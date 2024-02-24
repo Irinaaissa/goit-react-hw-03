@@ -1,12 +1,12 @@
-// import css from './ContactList.module.css';
 
-import ContactForm from '../ContactForm/ContactForm';
+ import css from './ContactList.module.css';
+import Contact from '../Contact/Contact';
 
-export default function ContactList({ contacts, onDelete }) {
+export default function ContactList(contacts) {
   return (
-    <div >
-      {contacts.map(({ id, name, number }) => (
-        <ContactForm
+    <div className={css.contactList}>
+      {contacts.map(({ id, name, number,onDelete }) => (
+        <Contact
           key={id}
           id={id}
           name={name}
