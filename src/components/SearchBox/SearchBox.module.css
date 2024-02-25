@@ -1,10 +1,19 @@
+.wraper{
+  margin-top: 20px;
+}
 
 
 
+/* input { */
+  /* width: 420px; */
+  /* padding: 0px 8px; */
+/* } */
 
 .field {
   display: flex;
   border-radius: 4px;
   background-color: transparent;
   color: inherit;
+  width: 420px;
+  border: 2px solid;
 }

@@ -45,7 +45,7 @@ export default function App() {
   }, [contacts]);
 
   return (
-    <div >
+    <div className='from'>
       <h1>Phonebook</h1>
       <ContactForm onAdd={addContact} />
       <SearchBox value={filter} onChange={setFilter} />
